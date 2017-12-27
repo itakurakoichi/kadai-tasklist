@@ -1,0 +1,64 @@
+h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dt,dd,figure {
+  margin: 0;
+  padding: 0;
+  font-weight: normal
+}
+
+ul,ol {
+  list-style: none
+}
+
+li {
+  padding: 0
+}
+
+img {
+  border: 0;
+  vertical-align: top
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%
+}
+
+body {
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+  line-height: 1;
+  overflow-x: hidden
+}
+
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary {
+  display: block
+}
+
+button,input,select,textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: baseline
+}
+
+textarea {
+  vertical-align: top
+}
+
+table {
+  border-spacing: 0
+}
+
+iframe {
+	vertical-align: bottom
+}
+
+a {
+  color: #36a;
+    text-decoration: none
+}
+
+a:visited {
+  // color: #888;
+}

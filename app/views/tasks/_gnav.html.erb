@@ -1,0 +1,19 @@
+<div class="l-gnav">
+	<nav class="gnav">
+		<ul class="l-gnav_list">
+			<li>
+				<div class="gnav_list"><%= link_to '一覧', tasks_path %></div>
+			</li>
+			<li>
+				<div class="gnav_list"><%= link_to '新規', new_task_path %></div>
+			</li>
+			<!--
+			% if params[:action] === 'show' %>
+			<li>
+				<div class="gnav_list">%= link_to '編集', edit_task_path %></div>
+			</li>
+			% end %>
+			-->
+		</ul>
+	</nav>
+</div>

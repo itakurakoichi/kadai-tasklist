@@ -1,0 +1,33 @@
+<header class="header">
+	<h1 class="header-title"><a href='/'>タスクリスト</a></h1>
+	<div class="header-subtitle">編集</div>
+</header>
+
+<%= render 'gnav' %>
+
+<div class="wrapper">
+	<div class="l-main">
+		<main class="main">
+		
+			<div class="l-form">
+				<%= form_for @task, html: {class: 'form'} do |f| %>
+					<div class="form-header">
+						<div class="form-title">ID<%= @task.id %>のタスクを編集します</div>
+					</div>
+					<div class="form-body">
+						<div class="form_content">
+							<%= f.label :content, 'タスク内容' %>
+							<%= f.text_field :content, class: 'form-control' %>
+						</div>
+					</div>
+					<div class="form-footer">
+						<div class="form-footer-action">
+							<%= f.submit '編集する', class: 'form-btn' %>
+						</div>
+					</div>
+				<% end %>
+			</div>
+
+		</main>
+	</div><!--/.l-main-->
+</div><!--/.wrapper-->
