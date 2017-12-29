@@ -5,34 +5,13 @@
 
 <%= render 'gnav' %>
 
-<!--<div class="debug" style="border: 3px solid #f00; padding: 20px; margin: 20px 50px 0;">-->
-<!--	<div class="debug-items">-->
-<!--		@params:<br><%= @params %>-->
-<!--	</div>-->
-<!--	<div class="debug-items">-->
-<!--		@params_task:<br><%= @params_task %>-->
-<!--	</div>-->
-<!--</div>-->
-
 <div class="wrapper">
 	<div class="l-main">
 		<main class="main">
 			
 			<ul class="l-task_list">
 					<li>
-						<div class="task_list">
-							<div class="task_list-header">
-								<div class="task_list-id">タスクNo.<%= @task.id %></div>
-							</div>
-							<div class="task_list-body">
-								<di class="task_list-text"><%= @task.content %></p>
-							</div>
-							<div class="task_list-footer">
-								<div class="task_list-footer-date">投稿日: <%= @task.created_at %></div>
-								<div class="task_list-footer-link"><%= link_to '編集', edit_task_path %></div>
-								<div class="task_list-footer-link"><%= link_to '削除', @task, method: :delete, data:{ confirm: '本当に削除してよいですか？' } %></div>
-							</div>
-						</div>
+						<%= render 'task_list', task: @task %>
 					</li>
 			</ul>
 

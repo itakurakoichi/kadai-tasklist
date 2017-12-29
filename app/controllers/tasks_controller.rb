@@ -56,7 +56,7 @@ class TasksController < ApplicationController
 	def task_params
 		# new から create へ送られてきたフォームの内容は params に格納されている
 		# Taskモデルのフォームから得られるデータで、contentカラムを取得
-		params.require(:task).permit(:content)
+		params.require(:task).permit(:content, :status)
 	end
 
 end

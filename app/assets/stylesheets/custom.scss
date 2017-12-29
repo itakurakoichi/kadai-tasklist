@@ -74,7 +74,29 @@ main {
 .task_list {
 	padding: 20px;
 	background: #fff;
-	&-header {}
+	&-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&-id {
+			font-size: 14px;
+			color: #999;
+		}
+		&-status {
+			padding: 4px 8px;
+			border-radius: 4px;
+			background: #000;
+			color: #fff;
+			font-size: 12px;
+			font-weight: bold;
+			&--incomplete {
+				background: #f00;
+			}
+			&--complete {
+				background: #aaa;
+			}
+		}
+	}
 	&-body {
 		margin-top: 20px;
 	}

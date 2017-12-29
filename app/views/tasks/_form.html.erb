@@ -14,16 +14,10 @@
 		</div>
 
 		<div class="form-body">
-			<div class="form_hoge">
-				<%= f.label :content, 'ほげ' %>
-				<%= f.text_field :content %>
+			<div class="form_status">
+				<%= f.label :status, 'ステータス' %>
+				<%= f.select :status, [['未完了', 1], ['完了', 2]], class: 'form-control', :prompt => '選択して下さい' %>
 			</div>
-
-			<div class="form_test">
-				<%= f.label :content, 'テスト' %>
-				<%= f.text_field :content, class: 'form-control', disabled: true %>
-			</div>
-
 			<div class="form_content">
 				<%= f.label :content, 'タスク内容' %>
 				<%= f.text_field :content, class: 'form-control' %>
@@ -39,7 +33,7 @@
 					elsif params[:action] === 'edit'
 						submit_text = '編集'
 					else
-						submit_text = '投稿とうこう'
+						submit_text = '投稿'
 					end
 				%>
 				<%= f.submit submit_text, class: 'form-btn' %>

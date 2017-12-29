@@ -6,32 +6,17 @@
 <%= render 'gnav' %>
 
 <div class="wrapper">
-
 	<div class="l-main">
 		<main class="main">
 		
 			<ul class="l-task_list">
 				<% @tasks.each do |task| %>
 					<li>
-						<div class="task_list">
-							<div class="task_list-header">
-								<div class="task_list-id">タスクNo.<%= task.id %></div>
-							</div>
-							<div class="task_list-body">
-								<di class="task_list-text"><%= task.content %></p>
-							</div>
-							<div class="task_list-footer">
-								<div class="task_list-footer-date">投稿日: <%= task.created_at %></div>
-								<div class="task_list-footer-link"><%= link_to '詳細', task %></div>
-								<div class="task_list-footer-link"><%= link_to '編集', edit_task_path(task) %></div>
-								<div class="task_list-footer-link"><%= link_to '削除', task, method: :delete, data:{ confirm: 'Are you sure?' } %></div>
-							</div>
-						</div>
+						<%= render 'task_list', task: task %>
 					</li>
 				<% end %>
 			</ul>
 		
 		</main>
-	
 	</div><!--/.l-main-->
 </div><!--/.wrapper-->

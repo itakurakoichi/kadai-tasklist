@@ -1,0 +1,28 @@
+						<div class="task_list">
+							<div class="task_list-header">
+								<div class="task_list-header-id">タスクNo.<%= task.id %></div>
+									<%
+										status_str = ''
+										status_class = ''
+										if task.status == '1'
+											status_str = '未完了'
+											status_class = 'incomplete'
+									%>
+									<div class="task_list-header-status task_list-header-status--<%= status_class %>"><%= status_str %></div>
+								<% elsif task.status == '2'
+											status_str = '完了'
+											status_class = 'complete'
+									%>
+									<div class="task_list-header-status task_list-header-status--<%= status_class %>"><%= status_str %></div>
+									<% end %>
+							</div>
+							<div class="task_list-body">
+								<di class="task_list-text"><%= task.content %></p>
+							</div>
+							<div class="task_list-footer">
+								<div class="task_list-footer-date">投稿日: <%= task.created_at %></div>
+								<% if params[:action] != 'show' %><div class="task_list-footer-link"><%= link_to '詳細', task %></div><% end %>
+								<div class="task_list-footer-link"><%= link_to '編集', edit_task_path(task) %></div>
+								<div class="task_list-footer-link"><%= link_to '削除', task, method: :delete, data:{ confirm: 'Are you sure?' } %></div>
+							</div>
+						</div>
