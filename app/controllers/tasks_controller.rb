@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
 
 	def index
-		@tasks = Task.all.reverse_order
+		@tasks = Task.all.reverse_order.page(params[:page]).per(5)
 	end
 
 	def new
