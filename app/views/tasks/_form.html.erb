@@ -4,8 +4,6 @@
 		<%= render './layouts/error_messages' %>
 
 		<div class="form-header">
-			<%= params %>
-
 			<div class="form-title">
 				<% if params[:action] === 'new' %>新しいタスクを100文字以内で追加して下さい
 				<% elsif params[:action] === 'edit' %>ID<%= @task.id %>のタスクを編集します
