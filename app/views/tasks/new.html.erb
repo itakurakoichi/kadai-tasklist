@@ -8,39 +8,7 @@
 <div class="wrapper">
 	<div class="l-main">
 		<main class="main">
-		
-			<div class="l-form">
-				<%= form_for @task, html: {class: 'form'} do |f| %>
-					<div class="form-header">
-						<div class="form-title">新しいタスクを追加して下さい</div>
-					</div>
-
-					<div class="form-body">
-						<div class="form_hoge">
-							<%= f.label :content, 'ほげ' %>
-							<%= f.text_field :content %>
-						</div>
-	
-						<div class="form_test">
-							<%= f.label :content, 'テスト' %>
-							<%= f.text_field :content, class: 'form-control', disabled: true %>
-						</div>
-	
-						<div class="form_content">
-							<%= f.label :content, 'タスク内容' %>
-							<%= f.text_field :content, class: 'form-control' %>
-						</div>
-						
-					</div>
-	
-					<div class="form-footer">
-						<div class="form-footer-action">
-							<%= f.submit '投稿', class: 'form-btn' %>
-						</div>
-					</div>
-				<% end %>
-			</div>
-
+			<%= render 'form' %>
 		</main>
 	</div><!--/.l-main-->
 </div><!--/.wrapper-->

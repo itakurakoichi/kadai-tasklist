@@ -1,0 +1,18 @@
+<% if @task.errors.any? %>
+<div id="error_explanation" class="l-error">
+	<div id="error_explanation" class="error">
+		<div class="error-header">
+			<div class="error-title"><%= pluralize(@task.errors.count, "error") %> 発生のため保存失敗</div>
+		</div>
+		<div class="error-body">
+			<ul class="l-error_message">
+				<% @task.errors.full_messages.each do |task| %>
+				<li>
+					<p class="error_message"><%= task %></p>
+				</li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+</div>
+<% end %>

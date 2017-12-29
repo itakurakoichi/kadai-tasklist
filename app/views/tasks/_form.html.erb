@@ -1,0 +1,49 @@
+<div class="l-form">
+	<%= form_for @task, html: {class: 'form'} do |f| %>
+
+		<%= render './layouts/error_messages' %>
+
+		<div class="form-header">
+			<%= params %>
+
+			<div class="form-title">
+				<% if params[:action] === 'new' %>新しいタスクを100文字以内で追加して下さい
+				<% elsif params[:action] === 'edit' %>ID<%= @task.id %>のタスクを編集します
+				<% end %>
+			</div>
+		</div>
+
+		<div class="form-body">
+			<div class="form_hoge">
+				<%= f.label :content, 'ほげ' %>
+				<%= f.text_field :content %>
+			</div>
+
+			<div class="form_test">
+				<%= f.label :content, 'テスト' %>
+				<%= f.text_field :content, class: 'form-control', disabled: true %>
+			</div>
+
+			<div class="form_content">
+				<%= f.label :content, 'タスク内容' %>
+				<%= f.text_field :content, class: 'form-control' %>
+			</div>
+		</div>
+
+		<div class="form-footer">
+			<div class="form-footer-action">
+				<%
+					submit_text = ''
+					if params[:action] === 'new' 
+						submit_text = '投稿'
+					elsif params[:action] === 'edit'
+						submit_text = '編集'
+					else
+						submit_text = '投稿とうこう'
+					end
+				%>
+				<%= f.submit submit_text, class: 'form-btn' %>
+			</div>
+		</div>
+	<% end %>
+</div>
