@@ -149,47 +149,47 @@ main {
 	margin-top: 10px;
 }
 
-//announce
-.l-announce {
-	margin: 20px;
-}
-.announce {
-	padding: 20px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	background: #fff;
-}
+// //announce
+// .l-announce {
+// 	margin: 20px;
+// }
+// .announce {
+// 	padding: 20px;
+// 	border: 1px solid #ccc;
+// 	border-radius: 4px;
+// 	background: #fff;
+// }
 
 // error messages
-.l-error {
-	margin-bottom: 50px;
-}
-.error {
-	padding: 15px;
-	border: 1px solid #f00;
-	border-radius: 4px;
-	background: #fff4f4;
-	&-header {}
-	&-title {
-		font-size: 16px;
-		font-weight: bold;
-	}
-	&-body {
-		margin-top: 15px;
-	}
-}
-.l-error_message {
-	margin: 10px 0 0 10px;
-	li {
-		list-style: square inside;
-		&:not(:first-child) {
-			margin-top: 5px;
-		}
-	}
-}
-.error_message {
-	display: inline;
-}
+// .l-error {
+// 	margin-bottom: 50px;
+// }
+// .error {
+// 	padding: 15px;
+// 	border: 1px solid #f00;
+// 	border-radius: 4px;
+// 	background: #fff4f4;
+// 	&-header {}
+// 	&-title {
+// 		font-size: 16px;
+// 		font-weight: bold;
+// 	}
+// 	&-body {
+// 		margin-top: 15px;
+// 	}
+// }
+// .l-error_message {
+// 	margin: 10px 0 0 10px;
+// 	li {
+// 		list-style: square inside;
+// 		&:not(:first-child) {
+// 			margin-top: 5px;
+// 		}
+// 	}
+// }
+// .error_message {
+// 	display: inline;
+// }
 
 // pagination
 .l-pagination {

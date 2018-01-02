@@ -1,7 +1,3 @@
 <% flash.each do |message_type, message| %>
-  <div class="l-announce">
-    <div class="announce <%= message_type %>">
-      <div class="announce-text"><%= message_type %>: <%= message %></div>
-    </div>
-  </div>
+  <div class="alert alert-<%= message_type %>"><%= message_type %>: <%= message %></div>
 <% end %>
