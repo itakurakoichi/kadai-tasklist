@@ -1,7 +1,8 @@
-<% if @task.errors.any? %>
+<% #model にはフォームの Model のインスタンスが代入される %>
+<% if model.errors.any? %>
   <div class="alert alert-warning">
     <ul>
-      <% @task.errors.full_messages.each do |message| %>
+      <% model.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
     </ul>
