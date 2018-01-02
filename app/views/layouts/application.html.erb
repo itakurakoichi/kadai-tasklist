@@ -13,9 +13,16 @@
 	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-
 <body>
-  <%= render 'layouts/flash_messages' %>
-  <%= yield %>
+	<header class="header">
+		<h1 class="header-title"><a href='/'>タスクリスト</a></h1>
+	</header>
+  <%= render 'layouts/navbar' %>
+
+    <div class="container">
+      <%= render 'layouts/flash_messages' %>
+
+      <%= yield %>
+    </div>
 </body>
 </html>
