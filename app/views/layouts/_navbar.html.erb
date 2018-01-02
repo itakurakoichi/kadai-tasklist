@@ -2,26 +2,34 @@
 	<nav class="gnav">
 		<ul class="l-gnav_list">
 			<li>
-				<div class="gnav_list"><%= link_to '一覧', tasks_path %></div>
+				<div class="gnav_list"><%= link_to 'タスク一覧', tasks_path %></div>
 			</li>
 			<li>
-				<div class="gnav_list"><%= link_to '新規', new_task_path %></div>
+				<div class="gnav_list"><%= link_to '新規タスク', new_task_path %></div>
 			</li>
-			<!--
-			% if params[:action] === 'show' %>
+		</ul>
+		
+		<ul class="l-gnav_list">
 			<li>
-				<div class="gnav_list">%= link_to '編集', edit_task_path %></div>
+				<div class="gnav_list"><%= link_to 'ユーザー一覧', users_path %></div>
 			</li>
-			% end %>
-			-->
+		</ul>
+		
+		<ul class="l-gnav_list">
 			<li>
-				<div class="gnav_list">サインアップ</div>
+				<div class="gnav_list">
+					<%= link_to 'サインアップ', signup_path %>
+				</div>
 			</li>
 			<li>
-				<div class="gnav_list">ログイン</div>
+				<div class="gnav_list">
+					<%= link_to 'ログイン', '/' %>
+				</div>
 			</li>
 			<li>
-				<div class="gnav_list">ログアウト</div>
+				<div class="gnav_list">
+					<%= link_to 'ログアウト', '/' %>
+				</div>
 			</li>
 		</ul>
 	</nav>
