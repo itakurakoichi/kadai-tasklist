@@ -1,0 +1,27 @@
+<li class="media">
+	<div class="media-left">
+		<img class="media-object img-rounded" src="<%= gravatar_url(user, options = { size: 50 }) %>" alt="">
+	</div>
+	<div class="media-body">
+		<div>
+			タスクID.<%= todo.id %>
+		</div>
+		<div>
+			<%= link_to user.name, user_path(user) %> <span class="text-muted">posted at <%= todo.created_at %></span>
+		</div>
+		<div>
+			<p><%= todo.content %></p>
+		</div>
+
+		<% if current_user == todo.user %>
+		<div class="todo_list-footer" style="display: flex; margin-top: 10px;">
+			<% if params[:action] != 'show' %>
+			<%= link_to '詳細', todo, class: 'btn btn-xs btn-primary'%>
+			<% end %>
+			<%= link_to '編集', edit_todo_path(todo), class: 'btn btn-xs btn-primary'%>
+			<%= link_to '削除', todo, method: :delete, data:{ confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger'%>
+		</div>
+		<% end %>
+
+	</div>
+</li>

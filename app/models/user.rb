@@ -15,5 +15,5 @@ class User < ApplicationRecord
 	has_secure_password
 	
 	# 一対多を表現しておきます。 User から Task をみたとき、複数存在する
-	has_many :tasks
+	has_many :todos
 end

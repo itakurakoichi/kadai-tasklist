@@ -39,6 +39,15 @@
 
 <div class="l-gnav">
 	<nav class="gnav">
+		<ul class="l-gnav_list l-gnav_list--todos">
+			<li>
+				<div class="gnav_list"><%= link_to 'TODO一覧', todos_path %></div>
+			</li>
+			<li>
+				<div class="gnav_list"><%= link_to 'TODO追加', root_path %></div>
+			</li>
+		</ul>
+
 		<ul class="l-gnav_list l-gnav_list--tasks">
 			<li>
 				<div class="gnav_list"><%= link_to 'タスク一覧', tasks_path %></div>
@@ -48,16 +57,18 @@
 			</li>
 		</ul>
 		
+		<!--
 		<ul class="l-gnav_list l-gnav_list--users">
 			<li>
-				<div class="gnav_list"><%= link_to 'サインアップ', signup_path %></div>
+				<div class="gnav_list">%= link_to 'サインアップ', signup_path %></div>
 			</li>
 			<li>
-				<div class="gnav_list"><%= link_to 'ログイン', login_path %></div>
+				<div class="gnav_list">%= link_to 'ログイン', login_path %></div>
 			</li>
 			<li>
-				<div class="gnav_list"><%= link_to 'ログアウト', logout_path, method: :delete %></div>
+				<div class="gnav_list">%= link_to 'ログアウト', logout_path, method: :delete %></div>
 			</li>
 		</ul>
+		-->
 	</nav>
 </div>

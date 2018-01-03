@@ -2,8 +2,8 @@ class ToppagesController < ApplicationController
   def index
     if logged_in?
       @user = current_user
-      @task = current_user.tasks.build  # form_for 用
-      @tasks = current_user.tasks.order('created_at DESC').page(params[:page])
+      @todo = current_user.todos.build  # form_for 用
+      @todos = current_user.todos.order('created_at DESC').page(params[:page])
     end
   end
 end

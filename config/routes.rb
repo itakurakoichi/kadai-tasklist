@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'todos/index'
+
+  get 'todos/show'
+
+  get 'todos/create'
+
+  get 'todos/destroy'
+
   # トップページのrouting設定
   root to: 'toppages#index'
   
@@ -13,6 +21,9 @@ Rails.application.routes.draw do
   # 任意のrouterのみ追加
   resources :users, only: [:index, :show, :new, :create]
   
-  # タスクのrouting設定
+  # タスクのrouting
   resources :tasks
+
+  # Todo の routing
+  resources :todos
 end

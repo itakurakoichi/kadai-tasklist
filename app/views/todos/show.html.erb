@@ -1,0 +1,13 @@
+<div class="text-center" style="padding:15px; margin: 10px 0;">
+	<h2>Todo 詳細</h2>
+</div>
+
+<div class="col-xs-8" style="margin-top: 20px;">
+	<ul class="media-list">
+    <%= render 'todos/todolist', todo: @todo, user: @todo.user %>
+	</ul>
+</div>
+
+<div class="l-pagination">
+	<!--%= paginate @todos %>-->
+</div>
