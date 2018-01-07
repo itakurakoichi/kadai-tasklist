@@ -13,4 +13,8 @@ class User < ApplicationRecord
 	#   ログイン認証のための準備を良しなにする
 	# - 暗号化のために bcrypt Gem が必要
 	has_secure_password
+	
+	# User と Task の一対多である
+	# User のインスタンスが自分の Tasks を取得することができます -> user.tasks
+	has_many :tasks
 end

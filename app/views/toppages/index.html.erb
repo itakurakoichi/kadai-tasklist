@@ -1,8 +1,17 @@
 <% if logged_in? %>
 <div class="text-center">
-  <h1>ログイン済です</h1>
+  <h1>ログイン済</h1>
 </div>
-<p class="text-center">ユーザ名: <%= current_user.name %></p>
+
+<div class="row">
+  <div class="text-center">ユーザ名: <%= current_user.name %></div>
+  <aside class="col-md-4">
+    <%= render 'tasks/form', tasks: @tasks %>
+  </aside>
+  <div class="col-xs-8" style="margin-top: 50px;">
+    <%= render 'tasks/tasks', tasks: @tasks %>
+  </div>
+</div>
 
 <% else %>
 <div class="center jumbotron">
@@ -12,3 +21,4 @@
   </div>
 </div>
 <% end %>
+

@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-
-  get 'sessions/create'
-
-  get 'sessions/destroy'
-
   # トップページのrouting設定
   root to: 'toppages#index'
   
